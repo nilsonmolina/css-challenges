@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .challenge {
+      background-color: #2c445c;
+      padding: 20px;
+    }
+
+    .challenge>* {
+      width: 400px;
+      margin: 30px auto 30px auto;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      line-height: 10px;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: larger;
+    }
+
+    .header p {
+      color: grey;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      border: 3px solid #edb043;
+    }
+
+    .box p {
+      color: white;
+      font-weight: bold;
+    }
+
+
+    .bonus {
+      background-color: #f7f9fc;
+      height: 800px;
+      padding: 30px;
+      line-height: 10px;
+      position: relative;
+    }
+
+    .center {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+
+    .bonusBox {
+      margin: 30px 0 30px 0;
+      width: 400px;
+      height: 200px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+
+    .bonus h1 {
+      color: black;
+      font-style: bolder;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="challenge">
+    <div class="header">
+      <h1>Challenge 00</h1>
+      <p>Try and center the text using 3 different methods</p>
+    </div>
+    <div class="box">
+      <p>Center Me</p>
+    </div>
+    <div class="box">
+      <p>Center Me</p>
+    </div>
+    <div class="box">
+      <p>Center Me</p>
+    </div>
+  </div>
+  <div class="bonus">
+    <div class="center">
+      <h1>Bonus</h1>
+      <p>Add extra styling to containers</p>
+      <div class="bonusBox"></div>
+      <div class="bonusBox"></div>
+      <div class="bonusBox"></div>
+    </div>
+  </div>
+</body>
+
+</html>
