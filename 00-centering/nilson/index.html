@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00 - Centering</title>
+
+    <style>
+        /* FLEX SOLUTION */
+        .container.flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* POSITION ABSOLUTE SOLUTION */
+        .container.absolute {
+            position: relative;
+        }
+        .container.absolute .element {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* TABLE SOLUTION */
+        .container.table {
+            display: table;
+        }
+        .container.table .element {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+
+        /* ---------------
+            PAGE STYLES
+         ---------------*/
+        :root {
+            --gradient-indigo: linear-gradient(to top right, #7535F4 5%, #22B8F2 100%); 
+            --gradient-turqoise: linear-gradient(to top right, #20D8A2 0%, #2F8DD4 100%);
+            --gradient-pink: linear-gradient(to top right, #FC2684 0%, #FB31CD 100%);
+            --gradient-orange: linear-gradient(to top right, #F9C16B 0%, #EF6D5E 100%);
+        }
+
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 60px 50px;
+            background-color: #2f4758
+        }
+        section .title,
+        section .subtitle {
+            width: 375px;
+            margin: auto;
+            display: block;
+        }
+        section .title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        section .subtitle {
+            color: #b3c3d6;
+            color: #ccc;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        .container {
+            width: 375px;
+            height: 200px;
+            margin: 30px auto;
+            border: 4px solid #f5ae2d;
+            color: white;
+            font-weight: 600;
+        }
+
+        
+
+        /* ---------------
+            BONUS SECTION
+         ---------------*/
+        section.bonus {
+            background-color: #f7f9fc;
+        }
+        section.bonus .title,
+        section.bonus .subtitle {
+            width: 375px;
+            margin: auto;
+            display: block;
+        }
+        section.bonus .title {
+            color: #092540;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        section.bonus .subtitle {
+            color: #435366;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        .bonus .container {
+            width: 375px;
+            height: 225px;
+            margin: 25px auto;
+            position: relative;
+            border: none;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+            transition: transform .25s ease, box-shadow .25s ease;
+
+            overflow: hidden; /* Clips before/after shapes within container */
+        }
+        .bonus .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .15);
+        }
+
+        /* CONTAINER COLORS */
+        .bonus .container:nth-of-type(1) { background: var(--gradient-turqoise); }
+        .bonus .container:nth-of-type(2) { background: var(--gradient-indigo); }
+        .bonus .container:nth-of-type(3) { background: var(--gradient-pink); }
+
+        /* CONTAINER BACKGROUND SHAPES */
+        .bonus .container::before,
+        .bonus .container::after {
+            content: "";
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 50px solid white;
+            opacity: 0.2;
+        }
+        .bonus .container::before {
+            border-radius: 50%;
+        }
+        .bonus .container:nth-of-type(1)::before {
+            left: -125px;
+            top: -85px;
+        }
+        .bonus .container:nth-of-type(1)::after {
+            bottom: -150px;
+            right: -140px;
+        }
+        .bonus .container:nth-of-type(2)::before {
+            right: -105px;
+            bottom: -125px;
+        }
+        .bonus .container:nth-of-type(2)::after {
+            top: -120px;
+            left: -120px;
+        }
+        .bonus .container:nth-of-type(3)::before {
+            left: -95px;
+            bottom: -120px;
+        }
+        .bonus .container:nth-of-type(3)::after {
+            top: -150px;
+            right: -90px;
+        }
+    </style>
+</head>
+<body>
+    <section class="challenge">
+        <span class="title">Challenge 00</span>
+        <span class="subtitle">Try and center the text using 3 different methods</span>
+
+        <div class="container flex">
+            <div class="element">Center Me</div>
+        </div>
+        <div class="container absolute">
+            <div class="element">Center Me</div>
+        </div>
+        <div class="container table">
+            <div class="element">Center Me</div>
+        </div>
+    </section>
+
+    <section class="bonus">
+        <span class="title">Bonus</span>
+        <span class="subtitle">Add extra styling to containers</span>
+
+        <div class="container flex">
+            <div class="element"></div>
+        </div>
+        <div class="container absolute">
+            <div class="element"></div>
+        </div>
+        <div class="container table">
+            <div class="element"></div>
+        </div>
+    </section>
+</body>
+</html>

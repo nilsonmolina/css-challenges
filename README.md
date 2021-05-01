@@ -5,6 +5,7 @@ Small weekly challenges to improve our CSS skills.
 <details>
     <summary>Challenge 00 - Centering Elements</summary>
 
+<br>
 Let's try centering elements both vertically and horizontally. Come up with at least 3 different ways.
 
 ![challenge-00](/00-centering/challenge-00.png)

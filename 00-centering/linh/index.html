@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* REMOVE DEFAULT CSS */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+   
+    /* -------------------
+      CHALENGE SECTION
+    ---------------------*/
+    .challenge {
+      background-color: #2c445c;
+      padding: 20px;
+    }
+    .challenge>* {
+      width: 350px;
+      margin: 30px auto 30px auto;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      color: white;
+      font-size: larger;
+    }
+    .header p {
+      color: grey;
+    }
+
+    .box {
+      height: 200px;
+      border: 3px solid #edb043;
+    }
+    .box p {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Align center using flexbox */
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Align center using grid */
+    .grid {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Align center using position */
+    .pos {
+      position: relative;
+    }
+    .pos>p {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* -------------------
+      BONUS SECTION
+    ---------------------*/
+    .bonus {
+      background-color: #f7f9fc;
+      height: 800px;
+      padding: 30px;
+      position: relative;
+    }
+    .center {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  
+    .bonus h1 {
+      color: black;
+      font-style: bolder;
+    }
+
+    .bonusBox {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0 30px 0;
+      border-radius: 10px;
+      width: 350px;
+      height: 200px;
+      box-shadow: -1px 1px 10px #888888;
+      transition: transform .25s ease
+    }
+
+    /* https://www.joshwcomeau.com/animation/css-transitions/ */
+    .bonusBox:hover {
+      transform: translateY(-5px);
+    }
+
+    :root {
+      --gradient-turquoise: linear-gradient(to bottom left, #2f8fd4, #21d5a5);
+      --gradient-indigo: linear-gradient(to bottom left, #2aaff3, #7535f5);
+      --gradient-pink: linear-gradient(to bottom left, #fc30c8, #fd2688);
+    }
+
+    .circle {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 40px solid white;
+      opacity: 0.2;
+    }
+
+    .square {
+      width: 100px;
+      height: 80px;
+      border: 40px solid white;
+      opacity: 0.2;
+      background-color: transparent;
+    }
+
+    .first {
+      background: var(--gradient-turquoise);
+    }
+    .first .circle {
+      border-radius: 0px 0 100px 0;
+      border-top: 0;
+      border-left: 0;
+    }
+    .first .square {
+      border-bottom: 0;
+      border-right: 0;
+      align-self: flex-end;
+    }
+
+    .second {
+      background: var(--gradient-indigo)
+    }
+    .second .square {
+      border-top: 0;
+      border-left: 0;
+    }
+    .second .circle {
+      border-radius: 100px 0 0 0;
+      border-right: 0;
+      border-bottom: 0;
+      align-self: flex-end;
+    }
+
+    .third {
+      background: var(--gradient-pink);
+    }
+    .third .square {
+      border-top: 0;
+      border-right: 0;
+    }
+    .third .circle {
+      border-radius: 0 100px 0 0;
+      border-bottom: 0;
+      border-left: 0;
+      align-self: flex-end;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="challenge">
+    <div class="header">
+      <h1>Challenge 00</h1>
+      <p>Try and center the text using 3 different methods</p>
+    </div>
+    <div class="box flex">
+      <p>Center Me</p>
+    </div>
+    <div class="box grid">
+      <p>Center Me</p>
+    </div>
+    <div class="box pos">
+      <p>Center Me</p>
+    </div>
+  </div>
+  <div class="bonus">
+    <div class="center">
+      <h1>Bonus</h1>
+      <p>Add extra styling to containers</p>
+      <div class="bonusBox first">
+        <div class='circle'></div>
+        <div class='square'></div>
+      </div>
+      <div class="bonusBox second">
+        <div class='square'></div>
+        <div class='circle'></div>
+      </div>
+      <div class="bonusBox third">
+        <div class='circle'></div>
+        <div class='square'></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
